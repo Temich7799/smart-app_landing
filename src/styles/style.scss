@@ -1,92 +1,289 @@
-.header {
+body {
+    max-width: 2570px;
+    margin: 0 auto;
+    color: red;
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap');
+    font-family: 'Raleway', sans-serif;
 
-    &__logo {
-    }
-
-    &__menu {
-    }
-
-    &__contacts {
+    a {
+        text-decoration: none;
+        font-size: 14px;
+        color: #3c3d42;
     }
 }
-.main {
+
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+}
+
+.scroll-menu {
+    max-width: 1085px;
+    height: 600px;
+
+    &__items {}
 
     &__item {
+        @include flexCenter();
 
-        &_accent {
+        .text {
+            font-size: 20px;
+            color: #9fa9a9;
+        }
+    }
+
+    &__icon {
+
+        &_small {}
+
+        &_big {
+            max-width: 142px;
+            margin: 0 auto;
+        }
+    }
+
+    &__content {}
+}
+
+
+
+.header {
+    @include flexCenter();
+    max-width: 1170px;
+    height: 47px;
+    margin: 0 auto;
+    color: #3c3d42;
+
+    &__logo {}
+
+    &__menu {}
+}
+
+.contacts {
+    display: flex;
+    margin-left: auto;
+
+    &_header {}
+
+    &__item {
+        @include flexCenter();
+        max-width: 305px;
+    }
+
+    &__icon {}
+
+    &__text {}
+}
+
+.text {
+    line-height: 1.5;
+    color: #afb8b8;
+
+    &_align {
+        &_center {
+            text-align: center;
         }
     }
 }
+
+.main {
+
+    &__item {
+        @include flexCenter();
+        width: 100%;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 104px 0;
+
+        &_accent {
+            padding: 62px 0;
+            background-color: #f2f9fe;
+        }
+    }
+}
+
 .banner {
+    max-width: 2570px;
 
     &_slide {
+        width: 100%;
     }
 
-    &__content {
+    &__content {}
+}
+
+.title {
+    margin-top: 0;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: #636c6c;
+
+    &_style {
+        &_align-left {
+            text-align: left;
+        }
+
+        &_h2 {
+            color: #5dca88;
+        }
+
+        &_h3 {
+            color: #8c9494;
+        }
+
+        &_h4 {
+            color: #8c9494;
+        }
+
+        &_h5 {
+            font-size: 24px;
+            font-weight: normal;
+            color: #8c9494;
+        }
+
+        &_h6 {
+            text-align: left;
+            font-size: 24px;
+        }
     }
 }
-.title {
-}
-.text {
-}
+
 .content {
+    max-width: 1100px;
+
+    &_columns {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+    }
 }
+
 .btn {
+    width: 240px;
+    height: 60px;
+    border-radius: 50px;
 
     &_primary-btn {
+        border: solid 3px rgba(99, 108, 108, 0.5);
+        background-color: transparent;
     }
 }
+
 .carousel {
+    width: 65%;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    align-items: center;
+    justify-items: center;
 
     &_btn {
+        width: min-content;
+        border: none;
+        border-radius: 50%;
+        background-color: transparent
     }
 
     &__items {
+        @include flexCenter();
+        width: 88%;
+        justify-content: space-between;
     }
 
     &__item {
+        @include flexCenter();
+        width: min-content;
+        flex-direction: column;
     }
 }
+
 .reviews {
+    @include flexCenter();
+    flex-direction: column;
+    font-size: 24px;
 
     &__avatar {
+        width: 100%;
+        max-width: 100px;
     }
 
     &__quote {
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap');
+        font-style: italic;
+        color: #8c9494;
     }
 
     &__name {
+        color: #5dca88;
     }
 
-    &__pagination {
-    }
+    &__pagination {}
 }
-.pagination {
-}
+
+.pagination {}
+
 .subscribe {
+    @include flexCenter();
+    flex-direction: column;
+    width: 100%;
+    padding: 94px 0 121px;
 
     &__title {
+        @include flexCenter();
     }
 
-    &__mail-icon {
+    &__mail-icon {}
+
+    &__form {
+        @include flexCenter();
+    }
+
+    &__btn {
+        position: absolute;
+        right: 0;
+    }
+
+    &_background {
+        background-color: #f3f5f5;
     }
 }
+
 .form {
+    position: relative;
 
     &__input {
+        width: 742px;
+        height: 14px;
+        padding: 24px 0 22px 24px;
+        border: solid 2px #bbc3c2;
+        border-radius: 50px;
     }
 
     &__submit-btn {
+        width: 172px;
+        height: 62px;
+        border: none;
+        background-color: #5dca88;
+        font-family: ProximaNova;
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: bold;
+        color: #fff;
     }
 }
+
 .footer {
+    @include flexCenter();
+    width: 100%;
+    flex-direction: column;
+    padding: 75px 0 49px 0;
+    background-color: #2d312f;
 
-    &__title {
-    }
+    &__icons {}
 
-    &__icons {
-    }
+    &__menu {}
 
-    &__menu {
+    a {
+        color: #8c9494;
     }
 }
